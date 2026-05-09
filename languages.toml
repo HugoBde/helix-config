@@ -1,0 +1,12 @@
+[[language]]
+name = "rust"
+[language-server.rust-analyzer.config]
+rustfmt = { extraArgs  = ["+nightly"]}
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'

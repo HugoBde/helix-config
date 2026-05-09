@@ -1,0 +1,59 @@
+theme = "kanagawa-dragon"
+
+[editor]
+mouse = false
+line-number = "relative"
+cursorline = true
+completion-timeout = 150
+bufferline = "always"
+color-modes = true
+text-width = 120
+popup-border = "all"
+end-of-line-diagnostics = "warning"
+auto-save = true
+
+
+
+
+[editor.statusline]
+left = ["mode", "version-control", ]
+center = ["spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["workspace-diagnostics", "position", "position-percentage", "file-type"]
+
+
+[editor.statusline.mode]
+normal = "NORMAL"
+insert = "INSERT"
+select = "SELECT"
+
+
+[editor.cursor-shape]
+normal = "underline"
+select = "hidden"
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 0
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[keys.normal]
+X = "extend_line_above"
+V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.insert]
+"C-space" = "completion"
