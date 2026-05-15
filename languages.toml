@@ -1,8 +1,8 @@
+[language-server.rust-analyzer.config]
+rustfmt = { extraArgs = ["+nightly"] }
+
 [[language]]
 name = "rust"
-[language-server.rust-analyzer.config]
-rustfmt = { extraArgs  = ["+nightly"]}
-
 [language.auto-pairs]
 '(' = ')'
 '{' = '}'
@@ -10,3 +10,20 @@ rustfmt = { extraArgs  = ["+nightly"]}
 '"' = '"'
 '`' = '`'
 '<' = '>'
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {}
+
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
+
+[[language]]
+name = "toml"
+language-servers = ["taplo"]
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true

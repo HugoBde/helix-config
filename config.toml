@@ -1,4 +1,4 @@
-theme = "kanagawa-dragon"
+theme = "horizon-dark"
 
 [editor]
 mouse = false
@@ -13,12 +13,20 @@ end-of-line-diagnostics = "warning"
 auto-save = true
 
 
-
-
 [editor.statusline]
-left = ["mode", "version-control", ]
-center = ["spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
-right = ["workspace-diagnostics", "position", "position-percentage", "file-type"]
+left = ["mode", "version-control"]
+center = [
+  "spinner",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+]
+right = [
+  "workspace-diagnostics",
+  "position",
+  "position-percentage",
+  "file-type",
+]
 
 
 [editor.statusline.mode]
@@ -28,8 +36,8 @@ select = "SELECT"
 
 
 [editor.cursor-shape]
-normal = "underline"
-select = "hidden"
+normal = "block"
+select = "block"
 insert = "bar"
 
 [editor.file-picker]
@@ -48,12 +56,13 @@ character = "▏"
 skip-levels = 0
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
+cursor-line = "disable"
 
 [keys.normal]
 X = "extend_line_above"
 V = ["goto_first_nonwhitespace", "extend_to_line_end"]
 esc = ["collapse_selection", "keep_primary_selection"]
+space.B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
 
 [keys.insert]
 "C-space" = "completion"
