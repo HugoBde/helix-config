@@ -1,4 +1,4 @@
-theme = "horizon-dark"
+theme = "everforest_high_contrast"
 
 [editor]
 mouse = false
@@ -36,7 +36,7 @@ select = "SELECT"
 
 
 [editor.cursor-shape]
-normal = "block"
+normal = "underline"
 select = "block"
 insert = "bar"
 
